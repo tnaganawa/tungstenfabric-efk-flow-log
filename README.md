@@ -11,7 +11,7 @@ vRouter flow log to EFK flow collector
 CentOS 7:
 
 yum -y install python3
-pip3 intall docker-compose
+pip3 install docker-compose
 
 yum -y install docker
 systemctl start docker
