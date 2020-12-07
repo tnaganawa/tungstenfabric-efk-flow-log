@@ -63,8 +63,8 @@ systemctl enable td-agent
 ```
 
 
-### Screenshot
+## Screenshot
 
-![FlowDashboard](https://github.com/tnaganawa/tungstenfabric-efk-flow-log/blob/master/flow-dashboard.png)
-![SankeyDiagram](https://github.com/tnaganawa/tungstenfabric-efk-flow-log/blob/master/sankey-diagram.png)
-![FlowLog](https://github.com/tnaganawa/tungstenfabric-efk-flow-log/blob/master/flow-log.png)
+![FlowDashboard](https://github.com/tnaganawa/tungstenfabric-efk-flow-log/blob/main/flow-dashboard.png)
+![SankeyDiagram](https://github.com/tnaganawa/tungstenfabric-efk-flow-log/blob/main/sankey-diagram.png)
+![FlowLog](https://github.com/tnaganawa/tungstenfabric-efk-flow-log/blob/main/flow-log.png)
