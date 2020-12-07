@@ -22,11 +22,19 @@ systemctl disable firewalld
 
 
 curl -O https://raw.githubusercontent.com/robcowart/elastiflow/master/docker-compose.yml
+sed -i 's!elasticsearch.elasticsearch!elasticsearch/elasticsearch-oss!' docker-compose.yml
+sed -i 's!kibana.kibana!kibana/kibana-oss!' docker-compose.yml
 
 
 mkdir /var/lib/elastiflow_es && chown -R 1000:1000 /var/lib/elastiflow_es
 setenforce 0 # FIXME
 docker-compose -f docker-compose.yml up -d
+
+Import dashboard from Antrea repo
+ https://github.com/vmware-tanzu/antrea/blob/master/build/yamls/elk-flow-collector/kibana.ndjson
+to kibana:
+ Saved Object > Import
+
 ```
 
 ### vRouter node
@@ -53,3 +61,10 @@ vi /etc/td-agent/td-agent.conf
 systemctl start td-agent
 systemctl enable td-agent
 ```
+
+
+### Screenshot
+
+![FlowDashboard](https://github.com/tnaganawa/tungstenfabric-efk-flow-log/blob/master/flow-dashboard.png)
+![SankeyDiagram](https://github.com/tnaganawa/tungstenfabric-efk-flow-log/blob/master/sankey-diagram.png)
+![FlowLog](https://github.com/tnaganawa/tungstenfabric-efk-flow-log/blob/master/flow-log.png)
